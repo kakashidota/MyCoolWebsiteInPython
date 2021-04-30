@@ -21,8 +21,8 @@ def home():
         'experience': shProfile.acell('B3').value,
         'education': shProfile.acell('B4').value
     }
-    return render_template("index.html", profile=profile)
+    return render_template('index.html', profile=profile)
 
-@app.route('/contact')
+@app.route('/contact', methods=['POST', 'GET'])
 def contact():
     return render_template('contact.html')
